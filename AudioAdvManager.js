@@ -97,7 +97,9 @@ class AudioAdvManager {
             period는 마지막재생으로부터 정해진 시간 이내에는 또 재생할 수 없고 단위는 ms이다.
             중첩해서 재생을 하면 소리가 커지게 된다. 기본적으로 동시에 재생하더라도 볼륨이 동일하도록 밸런스를 맞춘다. 그런데 이 기능을 무시하고자 한다면 ignoreLayered 를 true로 해주자.
         */
-        if (id !== '__silent' && !this.interacted) await this.grant_permission();
+        if (false) {
+            if (id !== '__silent' && !this.interacted) await this.grant_permission();
+        }
         if (volume === undefined) volume = 1;
         let abort = false;
         if (!this.interacted) abort = true;
@@ -138,4 +140,4 @@ class AudioAdvManager {
         return bytes.buffer;
     }
 };
-//export default AudioAdvManager;
+// export default AudioAdvManager;
